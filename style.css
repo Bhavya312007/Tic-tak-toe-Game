@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0; 
+    font-family: 'calibri', Courier, monospace,'Times New Roman', Times, serif;
+}
+nav{
+    background-color: black;
+    color:white;
+    font-size: 30px;
+    padding:0px 20px;
+} 
+
+nav ul{
+    list-style:none;
+}
+
+.gamecontainer{
+    margin-top:20px;
+    display:flex;
+    /* justify-content: center; */
+    padding: 0vh 3vw ;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw); 
+    /* font-family:'Times New Roman', Times, serif, Helvetica, sans-serif Courier, monospace, serif; */
+}
+
+.line{
+    background-color: black;
+    width:30vw;
+    height:3px;
+    position: absolute;
+}
+
+.box{
+    border:2px solid black;
+    font-size:7vw;
+    cursor:pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color:rgb(235, 228, 243);
+}
+
+#info{
+    display:flex;
+    justify-content: space-between;
+    font-size:20px;
+}
+
+#reset{
+    padding:10px 20px;
+    border:2px solid black;
+    border-radius:5px;
+    font-size: 15px;
+}
+
+.gameinfo{
+    padding:0 20px;
+}
+
+.br-0{
+    border-right:0;
+}
+.bl-0{
+    border-left:0;
+}
+.bt-0{
+    border-top:0;
+}
+.bb-0{
+    border-bottom:0;
+}
+
+@media screen and (max-width:800px) {
+    .gamecontainer{
+        flex-wrap: wrap;
+    }
+    .container{
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+    .box{
+        font-size:15vw;
+    }
+    .gameinfo{
+        margin-top:40px;
+        padding: 0;
+    }
+}
